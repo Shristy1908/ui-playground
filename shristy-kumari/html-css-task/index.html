@@ -1,12 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <title>Document</title>
 </head>
+
 <body>
+
+    <!-- navbar section -->
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="../assets/deuex-logo.svg" alt="logo">
+        </div>
+        <div class="nav-menu">
+            <div class="notification"><i class="fas fa-regular fa-bell"></i></div>
+            <div class="setting"><i class="fa fa-gear"></i></div>
+            <div class="nav-profile">
+                <img class="profile-img" src="../assets/profile-img.jpeg" alt="Profile Picture" />
+                <span class="profile-name">
+                    Shristy Kumari
+                    <label for="dropdown-toggle">
+                        <i class="fa fa-caret-down opendropdown-icon" aria-hidden="true"></i>
+                    </label>
+                </span>
+                <input type="checkbox" id="dropdown-toggle" class="dropdown-checkbox">
+                <div class="dropdown">
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Change Password</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- cards section -->
+
+    <div class="card-container">
+        <div class="card">
+            <div class="text">
+                <h2>46.3K</h2>
+                <h6>Total Sales</h6>
+            </div>
+            <div class="icon"><img src="../assets/total-sales.png" /></div>
+        </div>
+        <div class="card">
+            <div class="text">
+                <h2>72</h2>
+                <h6>Total Items</h6>
+            </div>
+            <div class="icon"><img src="../assets/total-items.png" /></div>
+        </div>
+        <div class="card">
+            <div class="text">
+                <h2>3781</h2>
+                <h6>Total Users</h6>
+            </div>
+            <div class="icon"><img src="../assets/total-users.png" /></div>
+        </div>
+        <div class="card">
+            <div class="text">
+                <h2>3216</h2>
+                <h6>Total Order</h6>
+            </div>
+            <div class="icon"><img src="../assets/total-order.png" /></div>
+        </div>
+    </div>
+
+    <!-- table section -->
+
+    <!-- <div class="table-container">
+        <div class="table-header">
+            <div class="heading">
+                <h1>Product Details</h1>
+            </div>
+
+            <div class="btns">
+                <div class="tabs">
+                    <input type="radio" name="tab" id="tab1" checked>
+                    <label for="tab1" class="label">table</table>
+                    <input type="radio" name="tab" id="tab2">
+                    <label for="tab2" class="label">cards</label>
+                </div>
+               
+                <button>Add Record +</button>
+            </div>
+        </div>
+
+        <div class="tab-content" id="table">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Product Name</th>
+                    <th>Product Date</th>
+                    <th>Exchange</th>
+                    <th>Color Options</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Bluetooth Speaker</td>
+                    <td>22/07/2024</td>
+                    <td><i class="fas fa-check"></i></td>
+                    <td>Red, Blue</td>
+                    <td>4500</td>
+                    <td>3</td>
+                    <td>13500</td>
+                    <td><i class='far fa-trash-alt'></i>&nbsp;&nbsp;<i class='far fa-edit'></i></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bluetooth Speaker</td>
+                    <td>22/07/2024</td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td>Red, Blue</td>
+                    <td>4500</td>
+                    <td>3</td>
+                    <td>13500</td>
+                    <td><i class='far fa-trash-alt'></i>&nbsp;&nbsp;<i class='far fa-edit'></i></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bluetooth Speaker</td>
+                    <td>22/07/2024</td>
+                    <td><i class="fas fa-check"></i></td>
+                    <td>Red, Blue</td>
+                    <td>4500</td>
+                    <td>3</td>
+                    <td>13500</td>
+                    <td><i class='far fa-trash-alt'></i>&nbsp;&nbsp;<i class='far fa-edit'></i></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Bluetooth Speaker</td>
+                    <td>22/07/2024</td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td>Red, Blue</td>
+                    <td>4500</td>
+                    <td>3</td>
+                    <td>13500</td>
+                    <td><i class='far fa-trash-alt'></i>&nbsp;&nbsp;<i class='far fa-edit'></i></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Bluetooth Speaker</td>
+                    <td>22/07/2024</td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td>Red, Blue</td>
+                    <td>4500</td>
+                    <td>3</td>
+                    <td>13500</td>
+                    <td><i class='far fa-trash-alt'></i>&nbsp;&nbsp;<i class='far fa-edit'></i></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Bluetooth Speaker</td>
+                    <td>22/07/2024</td>
+                    <td><i class="fas fa-check"></i></td>
+                    <td>Red, Blue</td>
+                    <td>4500</td>
+                    <td>3</td>
+                    <td>13500</td>
+                    <td><i class='far fa-trash-alt'></i>&nbsp;&nbsp;<i class='far fa-edit'></i></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Bluetooth Speaker</td>
+                    <td>22/07/2024</td>
+                    <td><i class="fas fa-check"></i></td>
+                    <td>Red, Blue</td>
+                    <td>4500</td>
+                    <td>3</td>
+                    <td>13500</td>
+                    <td><i class='far fa-trash-alt'></i>&nbsp;&nbsp;<i class='far fa-edit'></i></td>
+                </tr>
+            </table>
+
+            <div class="pagination">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i> Prev</button>
+                <a href="#">1</a>
+                <p>of</p>
+                <a href="#">3</a>
+                <button class="next-btn"> Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="tab-content" id="card-container">
+            <h1>Container cards</h1>
+        </div>
+
+    </div> -->
+  
+    <div class="product-detail-container">
+        
+        <h5>Product Details</h5>
+        
+            <input type="radio" id="tab1" name="tabs" checked>
+            <label for="tab1" class="label"><i class="fas fa-calculator"></i></label>
     
+            <input type="radio" id="tab2" name="tabs">
+            <label for="tab2" class="label"><i class="fa fa-table"></i></label>
+        
+            <a href="#sidebar" class="add-record">Add Record +</a>
+         
+        
+        <!-- Content -->
+        
+        <div class="tab-content" id="content1">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Product Name</th>
+                    <th>Product Date</th>
+                    <th>Exchange</th>
+                    <th>Color Options</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Bluetooth Speaker</td>
+                    <td>22/07/2024</td>
+                    <td><i class="fas fa-check"></i></td>
+                    <td>Red, Blue</td>
+                    <td>4500</td>
+                    <td>3</td>
+                    <td>13500</td>
+                    <td><a href="#trash-popup"><i class='far fa-trash-alt'></i></a>&nbsp;&nbsp;<i class='far fa-edit'></i></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bluetooth Speaker</td>
+                    <td>22/07/2024</td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td>Red, Blue</td>
+                    <td>4500</td>
+                    <td>3</td>
+                    <td>13500</td>
+                    <td><i class='far fa-trash-alt'></i>&nbsp;&nbsp;<i class='far fa-edit'></i></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bluetooth Speaker</td>
+                    <td>22/07/2024</td>
+                    <td><i class="fas fa-check"></i></td>
+                    <td>Red, Blue</td>
+                    <td>4500</td>
+                    <td>3</td>
+                    <td>13500</td>
+                    <td><i class='far fa-trash-alt'></i>&nbsp;&nbsp;<i class='far fa-edit'></i></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Bluetooth Speaker</td>
+                    <td>22/07/2024</td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td>Red, Blue</td>
+                    <td>4500</td>
+                    <td>3</td>
+                    <td>13500</td>
+                    <td><i class='far fa-trash-alt'></i>&nbsp;&nbsp;<i class='far fa-edit'></i></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Bluetooth Speaker</td>
+                    <td>22/07/2024</td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td>Red, Blue</td>
+                    <td>4500</td>
+                    <td>3</td>
+                    <td>13500</td>
+                    <td><i class='far fa-trash-alt'></i>&nbsp;&nbsp;<i class='far fa-edit'></i></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Bluetooth Speaker</td>
+                    <td>22/07/2024</td>
+                    <td><i class="fas fa-check"></i></td>
+                    <td>Red, Blue</td>
+                    <td>4500</td>
+                    <td>3</td>
+                    <td>13500</td>
+                    <td><i class='far fa-trash-alt'></i>&nbsp;&nbsp;<i class='far fa-edit'></i></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Bluetooth Speaker</td>
+                    <td>22/07/2024</td>
+                    <td><i class="fas fa-check"></i></td>
+                    <td>Red, Blue</td>
+                    <td>4500</td>
+                    <td>3</td>
+                    <td>13500</td>
+                    <td><i class='far fa-trash-alt'></i>&nbsp;&nbsp;<i class='far fa-edit'></i></td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="tab-content" id="content2">
+            <div class="productscard-container">
+                <div class="product-card">
+                    <div class="product-text">
+                        <div class="product-name">
+                            <h4>Bluetooth Speaker</h4>  
+                            <div class="product-action">
+                                <i class='far fa-trash-alt'></i>
+                                <i class='far fa-edit'></i>
+                            </div>
+                        </div>
+                      
+                        <div class="product-info">
+                            <div class="left">
+                                <div>
+                                    <p class="head">ID</p>
+                                    <p class="value">1</p>
+                                </div>
+                                <div>
+                                    <p class="head">Status</p>
+                                    <p class="value"><i class="fas fa-check"></i></p>
+                                </div>
+                                <div>
+                                    <p class="head">Quantity</p>
+                                    <p class="value">3</p>
+                                </div>
+                                <div>
+                                    <p class="head">Amount</p>
+                                    <p class="value">13500</p>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div>
+                                    <p class="head">Product Date</p>
+                                    <p class="value">22/07/2024</p>
+                                </div>
+                                <div>
+                                    <p class="head">Color Option</p>
+                                    <p class="value">Red, Blue</p>
+                                </div>
+                                <div>
+                                    <p class="head">Price</p>
+                                    <p class="value">4500</p>
+                                </div>
+                            </div>      
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-text">
+                        <div class="product-name">
+                            <h4>Bluetooth Speaker</h4>  
+                            <div class="product-action">
+                                <i class='far fa-trash-alt'></i>
+                                <i class='far fa-edit'></i>
+                            </div>
+                        </div>
+                      
+                        <div class="product-info">
+                            <div class="left">
+                                <div>
+                                    <p class="head">ID</p>
+                                    <p class="value">1</p>
+                                </div>
+                                <div>
+                                    <p class="head">Status</p>
+                                    <p class="value"><i class="fas fa-check"></i></p>
+                                </div>
+                                <div>
+                                    <p class="head">Quantity</p>
+                                    <p class="value">3</p>
+                                </div>
+                                <div>
+                                    <p class="head">Amount</p>
+                                    <p class="value">13500</p>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div>
+                                    <p class="head">Product Date</p>
+                                    <p class="value">22/07/2024</p>
+                                </div>
+                                <div>
+                                    <p class="head">Color Option</p>
+                                    <p class="value">Red, Blue</p>
+                                </div>
+                                <div>
+                                    <p class="head">Price</p>
+                                    <p class="value">4500</p>
+                                </div>
+                            </div>      
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-text">
+                        <div class="product-name">
+                            <h4>Bluetooth Speaker</h4>  
+                            <div class="product-action">
+                                <i class='far fa-trash-alt'></i>
+                                <i class='far fa-edit'></i>
+                            </div>
+                        </div>
+                      
+                        <div class="product-info">
+                            <div class="left">
+                                <div>
+                                    <p class="head">ID</p>
+                                    <p class="value">1</p>
+                                </div>
+                                <div>
+                                    <p class="head">Status</p>
+                                    <p class="value"><i class="fas fa-check"></i></p>
+                                </div>
+                                <div>
+                                    <p class="head">Quantity</p>
+                                    <p class="value">3</p>
+                                </div>
+                                <div>
+                                    <p class="head">Amount</p>
+                                    <p class="value">13500</p>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div>
+                                    <p class="head">Product Date</p>
+                                    <p class="value">22/07/2024</p>
+                                </div>
+                                <div>
+                                    <p class="head">Color Option</p>
+                                    <p class="value">Red, Blue</p>
+                                </div>
+                                <div>
+                                    <p class="head">Price</p>
+                                    <p class="value">4500</p>
+                                </div>
+                            </div>      
+                        </div>
+                      
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        <div class="pagination">
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i> Prev</button>
+            <a href="#">1</a>
+            <p>of</p>
+            <a href="#">3</a>
+            <button class="next-btn"> Next <i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- add record slider -->
+
+    <div id="sidebar-overlay"></div>
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-box">
+        <h2>Add New Record</h2>
+        
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" id="id" value="ID 04">
+        </div>
+
+        <div class="form-group">
+            <label for="product-name">Product Name</label>
+            <select id="product-name">
+               <option>Bluetooth Speaker</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Product Description</label>
+            <textarea id="description" rows="4">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" value="2024-07-23">
+        </div>
+
+        <div class="form-group">
+            <label>Status</label>
+            <div class="status-options">
+                <input type="radio" id="available" name="status" checked>
+                <label for="available">Available</label>
+                <input type="radio" id="notAvailable" name="status">
+                <label for="notAvailable">Not Available</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Color Options</label>
+            <div class="color-options">
+                <input type="checkbox" id="red" checked><span class="clr-box red"></span>
+                <label for="red">Red</label>
+                <input type="checkbox" id="yellow"><span class="clr-box yellow"></span>
+                <label for="yellow">Yellow</label>
+                <input type="checkbox" id="blue" checked><span class="clr-box blue"></span>
+                <label for="blue">Blue</label>
+                <input type="checkbox" id="white"><span class="clr-box green"></span>
+                <label for="white">Green</label>
+                <input type="checkbox" id="black"><span class="clr-box black"></span>
+                <label for="black">Black</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" value="5">
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" id="price" value="INR 3200">
+        </div>
+
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="text" id="amount" value="INR 16000">
+        </div>
+
+        <div class="sidebar-buttons">
+            <a href="#" class="cancel-btn">Cancel</a>
+            <button class="add-btn">Add</button>
+        </div>
+        </div>
+    </div>
+
+    <!-- delete pupup section -->
+
+    <div id="trash-popup" class="popup-modal">
+        <div class="popup-box">
+            <h3>Delete Product</h3><br/>
+            <p>Are you sure you want to remove<br/> Bluetooth Speaker from the inventory?</p>
+
+            <div class="popup-buttons">
+                <a href="#">
+                    <button class="close-btn">Cancel</button>
+                </a>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/416879b001.js" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
