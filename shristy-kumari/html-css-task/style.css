@@ -355,7 +355,7 @@ input[type="radio"]:checked+.tab-icon {
 }
 
 /* sidebar styling here */
-#sidebar-overlay {
+.sidebar-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -383,7 +383,7 @@ input[type="radio"]:checked+.tab-icon {
 #sidebar:target,#edit:target{
     right: 0;
 }
-#sidebar:target ~ #sidebar-overlay ,#edit:target ~ #edit-sidebar-overlay{
+#sidebar:target ~ .sidebar-overlay ,#edit:target ~ .edit-sidebar-overlay{
     opacity: 1;
     visibility: visible;
     transform: scale(1.2);
@@ -545,5 +545,6 @@ I used
     display: flex;
 }
 .deleted-product{
-    color: #050D26;
+    color: #081439;
+    font-weight: 500;
 }
