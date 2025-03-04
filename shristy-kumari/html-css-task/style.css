@@ -1,4 +1,7 @@
 /* navbar styling here */
+body{
+   font-family: "Work Sans", sans-serif;
+}
 *{
     margin: 0;
     padding: 0;
@@ -78,7 +81,6 @@
     width: 24px;
     height: 24px;
 }
-
 /* card styling here */
 .card-container{
     width: 1296px;
@@ -116,7 +118,6 @@
     line-height: 32px;
     color: #1B1E6D;
 }
-
 /* table styling here */
 .product-detail-container{
     width: 1296px;
@@ -170,7 +171,6 @@ th{
 .fa-info-circle{
     color: #1C1B1F;
 }
-
 /* Tooltip styling here */
 .tooltip-icon {
     position: relative;
@@ -202,7 +202,6 @@ th{
     visibility: visible;
     opacity: 1;
 }
-
 /* tab styling */
 input[type="radio"] {
     display: none;
@@ -283,7 +282,6 @@ input[type="radio"]:checked+.tab-icon {
     position: relative;
     top: 10px;
 }
-
 /* product card styling here */
 .products-card-container{
     width: 98%;
@@ -353,7 +351,6 @@ input[type="radio"]:checked+.tab-icon {
 .product-info{
     margin-top: -15px;
 }
-
 /* sidebar styling here */
 .sidebar-overlay {
     position: fixed;
@@ -499,7 +496,6 @@ I used
     width: 16px;
     height: 16px;
 }
-
 /* delete popup styling here */
 .popup-modal {
     position: fixed;
