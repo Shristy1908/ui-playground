@@ -23,6 +23,7 @@
     grid-template-rows: repeat(3,6vw);
     grid-template-columns: repeat(3, 6vw);
     margin: 20px auto;
+    position: relative;
 }
 .game-info{
     width: 240px;
@@ -46,6 +47,13 @@
 }
 .box-text{
     color: #5f5d5d;
+}
+.line{
+    background-color: #27265e;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out;
 }
 .reset-button{
     background-color: #27265e;
