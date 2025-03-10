@@ -10,7 +10,7 @@
     <div class="overlay" id="overlay">
         <div class="overlay-content">
             <h2 class="welcome-header">Welcome to Tic Tac Toe!</h2>
-            <p class="instruction-header"><strong>Some Important Instrutions before start the game:</strong></p>
+            <p class="instruction-header"><strong>Some Important Instrutions before starting the game:</strong></p>
             <ul>
                 <li>Choose X or O to start.</li>
                 <li>Players take turns clicking on an empty box.</li>
@@ -19,11 +19,11 @@
             </ul>
 
             <p>Select your marker to begin:</p>
-            <div class="choice-buttons">
-                <button class="choice-btn" onclick="chooseMarker('X')">X</button>
-                <button class="choice-btn" onclick="chooseMarker('O')">0</button>
+            <div class="choice-marker-buttons">
+                <button class="choice-marker-btn" onclick="chooseMarker('X')">X</button>
+                <button class="choice-marker-btn" onclick="chooseMarker('O')">O</button>
             </div>
-            <button class="start-game" id="start-game" disabled onclick="startGame()">Start Game</button>
+            <button class="start-game-btn" id="start-game-btn" disabled onclick="startGame()">Start Game</button>
         </div>
     </div>
 
@@ -33,19 +33,10 @@
             <span class="info" id="info"></span>
         </div>
         <div class="container">
-            <div class="line"></div>
-            <div class="box bt-0 bl-0" ><span class="box-text"></span></div>  
-            <div class="box bt-0"><span class="box-text"></span></div>  
-            <div class="box bt-0 br-0"><span class="box-text"></span></div>  
-            <div class="box bl-0"><span class="box-text"></span></div>  
-            <div class="box"><span class="box-text"></span></div>  
-            <div class="box br-0"><span class="box-text"></span></div>  
-            <div class="box bl-0 bb-0"><span class="box-text"></span></div>  
-            <div class="box bb-0"><span class="box-text"></span></div>  
-            <div class="box bb-0 br-0"><span class="box-text"></span></div>      
+            <div class="strike-through"></div>     
         </div>
 
-        <button class="reset-button" id="reset-button">Restart</button>
+        <button class="restart-btn" id="restart-btn">Restart</button>
     </div>
     <script src="script.js"></script>
 </body>

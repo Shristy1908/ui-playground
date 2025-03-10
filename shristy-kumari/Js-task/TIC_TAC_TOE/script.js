@@ -1,33 +1,49 @@
 let turn = "X";
 let isGameover = false;
 let timer;
-const turnTimeLimit = 15; 
-let line = document.querySelector(".line");
-let info = document.getElementById("info");
-let resetbtn = document.querySelector("#reset-button");
-let boxes = document.getElementsByClassName("box");
 let selectedMarker = ""; 
+const turnTimeLimit = 15; 
 
-// Function to choose X or O
+let strikeThrough = document.querySelector(".strike-through");
+let info = document.querySelector("#info");
+let resetbtn = document.querySelector("#restart-btn");
+let startGameBtn = document.querySelector("#start-game-btn");
+let overlay=document.querySelector("#overlay")
+let boxes = document.getElementsByClassName("box");
+
+function createBoard() {
+    const container = document.querySelector(".container");
+    for (let i = 0; i < 9; i++) {
+        const box = document.createElement("div");
+        box.classList.add("box");
+        if (i < 3) box.classList.add("bt-0");
+        if (i % 3 === 0) box.classList.add("bl-0");
+        if ((i + 1) % 3 === 0) box.classList.add("br-0");
+        if (i >= 6) box.classList.add("bb-0");
+        const span = document.createElement("span");
+        span.classList.add("box-text");
+        box.appendChild(span);
+        container.appendChild(box);
+    }
+    handleBoxClickEvent();
+}
+
 function chooseMarker(marker) {
     selectedMarker = marker;
     turn = marker;
     startTimer();
-    document.getElementById("start-game").disabled = false;
+    startGameBtn.disabled = false;
 }
 
-// Function to start the game
 function startGame() {
-    document.getElementById("overlay").style.display = "none";
-    document.getElementById("game-container").style.display = "flex";
+    overlay.style.display = "none";
     startTimer();
 }
 
-function turnChange() {
+function handleTurnChange() {
     return turn === "X" ? "O" : "X";
 }
 
-// Timer function
 function startTimer() {
     let timeLeft = turnTimeLimit;
     updateTimerDisplay(timeLeft);
@@ -39,7 +55,7 @@ function startTimer() {
 
         if (timeLeft === 0) {
             clearInterval(timer);
-            info.innerText = `Time Over! ${turnChange()} Wins 🎉`;
+            info.innerText = `Time Over! ${handleTurnChange()} Wins 🎉`;
             isGameover = true;
         }
     }, 1000);
@@ -49,7 +65,6 @@ function updateTimerDisplay(time) {
     info.innerText = `Turn for ${turn} | Time left: ${time}s`;
 }
 
-// Check winner function
 const checkWinner = () => {
     let boxtext = document.getElementsByClassName("box-text");
     let wins = [
@@ -62,47 +77,50 @@ const checkWinner = () => {
         [0, 4, 8, 0, 9 , 45],
         [2, 4, 6, 0, 9, 135],
     ];
-    wins.forEach((e) => {
-        if ((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && 
-            (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && 
-            boxtext[e[0]].innerText !== "") {
-            info.innerText = boxtext[e[0]].innerText + " Winner! 🎉";
+    wins.forEach((boxMarker) => {
+        if ((boxtext[boxMarker[0]].innerText === boxtext[boxMarker[1]].innerText) && 
+            (boxtext[boxMarker[2]].innerText === boxtext[boxMarker[1]].innerText) && 
+            boxtext[boxMarker[0]].innerText !== "") {
+            info.innerText = `${boxtext[boxMarker[0]].innerText} Winner! 🎉`;
             isGameover = true;
-            line.style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
-            line.style.width = "18vw";
-            line.style.display = "block";
+            strikeThrough.style.transform = `translate(${boxMarker[3]}vw, ${boxMarker[4]}vw) rotate(${boxMarker[5]}deg)`;
+            strikeThrough.style.width = "18vw";
+            strikeThrough.style.display = "block";
             clearInterval(timer);
         }
     });
 }
 
-// Handle box click event
-Array.from(boxes).forEach((element) => {
-    let boxtext = element.querySelector(".box-text");
-    element.addEventListener("click", () => {
-        if (boxtext.innerText === "" && !isGameover) {
-            boxtext.innerText = turn;
-            checkWinner();
-            if (!isGameover) {
-                turn = turnChange();
-                info.innerText = "Turn for " + turn;
-                startTimer();
+function handleBoxClickEvent() {
+    Array.from(boxes).forEach((element) => {
+        let eachBoxtext = element.querySelector(".box-text");
+        element.addEventListener("click", () => {
+            if (eachBoxtext.innerText === "" && !isGameover) {
+                eachBoxtext.innerText = turn;
+                checkWinner();
+                if (!isGameover) {
+                    turn = handleTurnChange();
+                    info.innerText = `Turn for ${turn}`;
+                    startTimer();
+                }
             }
-        }
-    });
-});
+        });
+    });  
+}
+handleBoxClickEvent();
 
-// Reset the game
 resetbtn.addEventListener("click", () => {
-    let boxtexts = document.querySelectorAll(".box-text");
-    Array.from(boxtexts).forEach((element) => {
+    let allBoxtexts = document.querySelectorAll(".box-text");
+    Array.from(allBoxtexts).forEach((element) => {
         element.innerText = "";
     });
-    document.getElementById("overlay").style.display = "flex";
+    overlay.style.display = "flex";
     selectedMarker = "";
     turn = "";
     isGameover = false;
-    document.getElementById("start-game").disabled = true;
-    line.style.display = "none";
+    startGameBtn.disabled = true;
+    strikeThrough.style.display = "none";
     clearInterval(timer);
 });
+
+createBoard();
