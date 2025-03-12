@@ -1,0 +1,147 @@
+/* todo styling here*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+.todo-container {
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #0000001a;
+}
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+.task-input {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.add-btn {
+  background-color: #192963;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.clear-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.add-btn:hover,
+.clear-btn:hover {
+  opacity: 0.8;
+}
+.task-list {
+  margin-top: 10px;
+}
+.task {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px #0000001a;
+}
+.task-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.task-text {
+  flex-grow: 1;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.edit-btn,
+.delete-btn,.save-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.delete-btn {
+  background-color: #a62532;
+}
+.edit-btn:hover,
+.delete-btn:hover {
+  opacity: 0.8;
+}
+.subtask-input {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.subtask-input input {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.add-subtask-btn {
+  background-color: #192963;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.add-subtask-btn:hover {
+  opacity: 0.8;
+}
+.subtask-list {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+.subtask {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+  background: white;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  border: 1px solid #ddd;
+}
+.task-text.completed, .subtask-text.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+.edit-task-input {
+  width: 60%;
+  padding: 5px;
+}
+.add-btn, .clear-btn, .edit-btn, .delete-btn, .add-subtask-btn, .save-btn {
+  cursor: pointer;
+  margin-left: 5px;
+}
