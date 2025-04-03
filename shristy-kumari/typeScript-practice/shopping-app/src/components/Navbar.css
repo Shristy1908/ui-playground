@@ -1,36 +1,93 @@
 .navbar {
-  background: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+	background: white;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 1rem 2rem;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
 }
 
 .navbar-content {
-  max-width: 1400px;
-  margin: 0 auto;
+	max-width: 1400px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.cart-icon {
+	position: relative;
+	cursor: pointer;
+}
+.cart-count {
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	background: #ff4444;
+	color: white;
+	border-radius: 50%;
+	width: 18px;
+	height: 18px;
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.cart-dropdown {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: 320px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 1rem;
+	margin-top: 0.5rem;
+	max-height: 400px;
+	overflow-y: auto;
+}
+.cart-item {
+	display: flex;
+	gap: 1rem;
+	padding: 0.5rem 0;
+	border-bottom: 1px solid #e0e0e0;
+}
+.cart-item:last-child {
+	border-bottom: none;
+}
+.cart-item-image {
+	width: 60px;
+	height: 60px;
+	object-fit: contain;
+}
+.cart-item-details {
+	flex: 1;
+}
+.cart-item-name {
+  font-size: 10px;
+  margin-bottom: 0.25rem;
+}
+
+.cart-item-price {
+  font-weight: 600;
+  color: #333;
+}
+
+.cart-item-quantity {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.cart-total {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  font-weight: 600;
 }
 
-.cart-icon {
-  position: relative;
-  cursor: pointer;
-}
-
-.cart-count {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background: #ff4444;
-  color: white;
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.empty-cart {
+  text-align: center;
+  color: #666;
+  padding: 1rem;
 }
