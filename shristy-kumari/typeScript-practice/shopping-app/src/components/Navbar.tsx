@@ -20,7 +20,10 @@ function Navbar({ cartItems }: NavbarProps) {
 	return (
 		<nav className="navbar">
 			<div className="navbar-content">
-				<h1><img src={logo} className="logo"/><span className="logo-title">SHOPPING CART</span></h1>
+				<h1>
+					<img src={logo} className="logo" />
+					<span className="logo-title">SHOPPING CART</span>
+				</h1>
 				<div className="cart-icon" onClick={() => setIsCartOpen(!isCartOpen)}>
 					<ShoppingCart size={24} />
 					{totalItems > 0 && <span className="cart-count">{totalItems}</span>}

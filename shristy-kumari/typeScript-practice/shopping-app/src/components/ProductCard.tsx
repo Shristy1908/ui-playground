@@ -7,8 +7,7 @@ interface ProductCardProps {
 }
 
 function ProductCard({ product, onAddToCart }: ProductCardProps) {
-	const { title, price, rating, image, description, category } =
-		product;
+	const { title, price, rating, image, description, category } = product;
 
 	const renderStars = (rating: number) => {
 		return [...Array(5)].map((_, i) => (
