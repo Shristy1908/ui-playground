@@ -10,6 +10,24 @@ interface SidebarProps {
 	clearFilters: () => void;
 }
 
+const categories = [
+	"All Categories",
+	"Electronics",
+	"Jewelry",
+	"Men's Clothing",
+	"Women's Clothing",
+];
+
+const priceRanges = [
+	{ id: "all", label: "All Prices" },
+	{ id: "0-50", label: "Under $50" },
+	{ id: "50-100", label: "$50 - $100" },
+	{ id: "100-500", label: "$100 - $500" },
+	{ id: "500+", label: "Over $500" },
+];
+
+const ratings = [4, 3, 2, 1];
+
 function Sidebar({
 	selectedCategory,
 	setSelectedCategory,
@@ -19,22 +37,6 @@ function Sidebar({
 	setRating,
 	clearFilters,
 }: SidebarProps) {
-	const categories = [
-		"All Categories",
-		"Electronics",
-		"Jewelry",
-		"Men's Clothing",
-		"Women's Clothing",
-	];
-
-	const priceRanges = [
-		{ id: "all", label: "All Prices" },
-		{ id: "0-50", label: "Under $50" },
-		{ id: "50-100", label: "$50 - $100" },
-		{ id: "100-500", label: "$100 - $500" },
-		{ id: "500+", label: "Over $500" },
-	];
-
 	return (
 		<aside className="sidebar">
 			<div className="filter-header">
@@ -85,7 +87,7 @@ function Sidebar({
 			<section className="filter-section">
 				<h2>Rating</h2>
 				<ul>
-					{[4, 3, 2, 1].map((stars) => (
+					{ratings.map((stars) => (
 						<li key={stars}>
 							<label>
 								<input

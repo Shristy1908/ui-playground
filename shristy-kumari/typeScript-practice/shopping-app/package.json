@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+     "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.15",

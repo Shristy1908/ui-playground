@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 import { ShoppingCart } from "@phosphor-icons/react";
-import { CartItem } from "../types";
+import { CartItem } from "../../types";
 import "./Navbar.css";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 
 interface NavbarProps {
 	cartItems: CartItem[];
